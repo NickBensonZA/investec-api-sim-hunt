@@ -110,7 +110,7 @@ There are helpful links to the Investec docs, Community wiki, GitHub repo and th
 
 Programmable documentation can be found here: https://developer.investec.com/programmable-banking/
 
-[![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/NickBensonZA/investec-api-sim-hunt/blob/main/Dockerfile)
+[![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/NickBensonZA/investec-api-sim-hunt/tree/main/Dockerfile)
 
 ## Contributing
 
