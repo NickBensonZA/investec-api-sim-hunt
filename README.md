@@ -1,4 +1,4 @@
-# Investec Programmable Banking Stateful Sandbox
+# Stateful Sandbox for a little hunt game
 
 A Node.js server to get everyone building and demoing regardless whether you have an account. The sandbox is set up in a way that it provides a single profile. Under the profile you are able to see accounts and cards. It does not require authentication because of the single profile. 
 
@@ -110,7 +110,7 @@ There are helpful links to the Investec docs, Community wiki, GitHub repo and th
 
 Programmable documentation can be found here: https://developer.investec.com/programmable-banking/
 
-[![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/devinpearson/programmable-banking-sim/tree/update-dockerfile)
+[![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/NickBensonZA/investec-api-sim-hunt/blob/main/Dockerfile)
 
 ## Contributing
 
