@@ -3,7 +3,7 @@ import morgan from 'morgan'
 import cors from 'cors'
 import dayjs from 'dayjs'
 import dotenv from 'dotenv'
-import { PrismaClient } from '@prisma/client'
+import { prisma } from './prisma.js'
 import { Server } from 'socket.io'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
@@ -28,7 +28,6 @@ dotenv.config()
 export const port = process.env.PORT || 3000
 // const dbFile = process.env.DB_FILE || 'investec.db'
 // const overdraft = process.env.OVERDRAFT || 5000
-const prisma = new PrismaClient()
 export const app = express()
 export const server = createServer(app)
 const io = new Server(server)

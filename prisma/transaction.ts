@@ -1,6 +1,5 @@
-import { PrismaClient, Prisma } from '@prisma/client'
-
-const prisma = new PrismaClient()
+import { Prisma } from '@prisma/client'
+import { prisma } from '../src/prisma.js'
 
 const accountId = '4675778129910189600000003'
 

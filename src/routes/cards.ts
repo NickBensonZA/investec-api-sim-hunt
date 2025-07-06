@@ -1,7 +1,6 @@
 import express, { Request, Response } from 'express'
 const router = express.Router()
-import { PrismaClient } from '@prisma/client'
-const prisma = new PrismaClient()
+import { prisma } from '../prisma.js'
 import { formatResponse, formatErrorResponse } from '../app.js'
 import { v4 as uuidv4 } from 'uuid'
 import emu from 'programmable-card-code-emulator'

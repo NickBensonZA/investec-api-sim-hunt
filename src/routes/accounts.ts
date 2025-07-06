@@ -1,8 +1,8 @@
 import express, { Request, Response } from 'express'
 import dayjs from 'dayjs'
 const router = express.Router()
-import { Prisma, PrismaClient } from '@prisma/client'
-const prisma = new PrismaClient()
+import { Prisma } from '@prisma/client'
+import { prisma } from '../prisma.js'
 import { formatResponse, formatErrorResponse } from '../app.js'
 import { Investec } from 'programmable-banking-faker'
 import { TransactionType, BalanceResponse } from '../types.js'

@@ -1,16 +1,12 @@
-FROM nikolaik/python-nodejs:latest as base
-# Add package file
-COPY package.json ./
-COPY package-lock.json ./
-COPY prisma ./prisma/ 
-# Install deps
-RUN npm install
+FROM node:lts-slim AS base
+WORKDIR /app
 
-# Copy source
-COPY src ./src
-COPY public ./public
-COPY tsconfig.json ./tsconfig.json
+COPY package*.json ./
+COPY prisma ./prisma/
+RUN npm ci --omit=dev
 
-# Expose port 3000
+COPY . .
+RUN npm run build
+
 EXPOSE 3000
-CMD ["npm", "run", "dev"]
+CMD ["node", "dist/index.js"]
