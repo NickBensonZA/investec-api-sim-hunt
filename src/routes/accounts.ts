@@ -274,33 +274,6 @@ router.post('/:accountId/paymultiple', async (req: Request, res: Response) => {
 router.post('/:accountId/transactions', async (req: Request, res: Response) => {
   try {
     let randomTx = Investec.transaction(req.params.accountId)
-    randomTx = { ...randomTx, ...req.body }
-
-    const accountId = req.params.accountId
-    // check that the account exists
-    const account = await prisma.account.findFirst({
-      where: {
-        accountId: accountId,
-      },
-    })
-    if (!account) {
-      console.log('no account found')
-      return formatErrorResponse(req, res, 404) // no account was found
-    }
-    // insert the transaction
-    const transaction = await prisma.transaction.create({
-      data: randomTx,
-    })
-    return formatResponse(transaction, req, res)
-  } catch (error) {
-    console.log(error)
-    return formatErrorResponse(req, res, 500)
-  }
-})
-
-router.post('/:accountId/transactions', async (req: Request, res: Response) => {
-  try {
-    let randomTx = Investec.transaction(req.params.accountId)
     randomTx.runningBalance = 0
     randomTx = { ...randomTx, ...req.body }
 
