@@ -1,6 +1,5 @@
-import { PrismaClient, Prisma } from '@prisma/client'
-
-const prisma = new PrismaClient()
+import { Prisma } from '@prisma/client'
+import { prisma } from '../src/prisma.js'
 
 const countryData: Prisma.CountryCreateInput[] = [
   { code: 'ZA', name: 'South Africa' },

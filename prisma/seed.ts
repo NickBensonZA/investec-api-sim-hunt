@@ -1,4 +1,4 @@
-import { PrismaClient } from '@prisma/client'
+import { prisma } from '../src/prisma.js'
 import { seedCurrencies } from './currency'
 import { seedCountries } from './country'
 import { seedMerchants } from './merchant'
@@ -7,8 +7,6 @@ import { seedTransactions } from './transaction'
 import { seedSettings } from './settings'
 import { seedCardCodes } from './card-code'
 import { seedCards } from './card'
-
-const prisma = new PrismaClient()
 
 async function main() {
   console.log(`Start seeding ...`)

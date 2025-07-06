@@ -1,6 +1,5 @@
-import { PrismaClient, Prisma } from '@prisma/client'
-
-const prisma = new PrismaClient()
+import { Prisma } from '@prisma/client'
+import { prisma } from '../src/prisma.js'
 
 const settingData: Prisma.SettingCreateInput[] = [
   { name: 'client_id', value: 'yAxzQRFX97vOcyQAwluEU6H6ePxMA5eY' },
